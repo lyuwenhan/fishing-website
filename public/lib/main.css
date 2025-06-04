@@ -1,0 +1,65 @@
+
+html, body {
+	font-size:large;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	font-family: "Ubuntu Mono", "Source Code Pro", monospace;
+	color: white;
+	background-color: #300a24;
+}
+#terminal{
+	position: fixed;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 1;
+	width: calc(100% + 14px);
+	height: calc(100% + 8px);
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background-color: #300a24;
+}
+html body , html body *{
+	cursor: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSczJyBoZWlnaHQ9JzMnPjxyZWN0IHdpZHRoPSczJyBoZWlnaHQ9JzMnIGZpbGw9J3doaXRlJy8+PC9zdmc+") 1 1, auto !important;
+}
+#terminal .xterm-viewport::-webkit-scrollbar {
+    display: none
+}
+#terminal .xterm-viewport {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+#full, #unfull{
+	position: fixed;
+	right: 0; bottom: 0;
+	z-index: 2;
+	height: 40px;
+	margin: 10px;
+	border: 0;
+	border-radius: 10px;
+}
+#full{
+	opacity: 0.7;
+}
+#unfull{
+	opacity: 0.1;
+}
+#full:hover{
+	opacity: 0.9;
+}
+#full:active{
+	opacity: 0.8;
+}
+#unfull:hover{
+	opacity: 0.5;
+}
+#unfull:active{
+	opacity: 0.3;
+}
+[hidden]{
+	display: none !important;
+	/* visibility: hidden !important;
+	opacity: 0 !important;
+	pointer-events: none !important; */
+}
