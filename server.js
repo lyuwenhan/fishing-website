@@ -10,7 +10,12 @@ const helmet = require('helmet');
 const { time } = require('console');
 const e = require('express');
 app.use(helmet());
-const server = http.createServer(app);
+const server = (process.env.USE_KEY ? http.createServer(
+	{
+		key: fs.readFileSync(process.env.KEY_PATH || 'key/key.pem'),
+		cert: fs.readFileSync(process.env.CERT_PATH || 'key/cert.pem'),
+	}
+,app) : http.createServer(app));
 const wss = new WebSocket.Server({ server });
 
 const SSH_CONFIG = {
