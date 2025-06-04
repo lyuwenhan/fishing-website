@@ -10,7 +10,7 @@ const helmet = require('helmet');
 const { time } = require('console');
 const e = require('express');
 app.use(helmet());
-const server = (process.env.USE_KEY ? http.createServer(
+const server = (process.env.USE_KEY === "true" ? http.createServer(
 	{
 		key: fs.readFileSync(process.env.KEY_PATH || 'key/key.pem'),
 		cert: fs.readFileSync(process.env.CERT_PATH || 'key/cert.pem'),
