@@ -38,7 +38,9 @@ function isValidUUIDv4(uuid) {
 	return regex.test(uuid);
 }
 
-app.use(express.static('public'));
+if(process.env.WEB !== "close"){
+	app.use(express.static('public'));
+}
 const ttoc = new Map();//token to connection
 const ttoto = new Map();//token to timeout
 const closetimeout = 1000 * 60 * 5; // 5分钟
