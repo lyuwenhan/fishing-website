@@ -1,5 +1,6 @@
 const express = require('express');
 const http = require('http');
+const https = require('https');
 const WebSocket = require('ws');
 const { Client } = require('ssh2');
 const fs = require('fs');
@@ -10,7 +11,7 @@ const helmet = require('helmet');
 const { time } = require('console');
 const e = require('express');
 app.use(helmet());
-const server = (process.env.USE_KEY === "true" ? http.createServer(
+const server = (process.env.USE_KEY === "true" ? https.createServer(
 	{
 		key: fs.readFileSync(process.env.KEY_PATH || 'key/key.pem'),
 		cert: fs.readFileSync(process.env.CERT_PATH || 'key/cert.pem'),
