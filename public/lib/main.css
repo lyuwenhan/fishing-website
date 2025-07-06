@@ -63,3 +63,6 @@ html body , html body *{
 	opacity: 0 !important;
 	pointer-events: none !important; */
 }
+[dir=ltr]{
+	padding: 10px 10px 0 10px;
+}
