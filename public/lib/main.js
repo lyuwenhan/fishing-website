@@ -14,8 +14,9 @@
 		window.location.replace(url.toString());
 		return
 	}
-
+	const fontSize = window.innerWidth < 768 ? 12 : 18;
 	const term = new Terminal({
+		fontSize: fontSize,
 		cursorBlink: true,
 		fontFamily: 'Consolas, Courier, monospace',
 		theme: {
