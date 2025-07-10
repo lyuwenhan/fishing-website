@@ -20,28 +20,28 @@
 		cursorBlink: true,
 		fontFamily: 'Consolas, Courier, monospace',
 		theme: {
-			background: "#300a24",
+			background: "#4E0E3B",
 			foreground: "#eeeeee",
 			cursor: "#dd4814",
 			selection: "#FFFFFF",
-
-			black: "#171421",
-			red: "#C21A23",
-			green: "#26A269",
-			yellow: "#A2734C",
-			blue: "#0037DA",
-			magenta: "#881798",
-			cyan: "#3A96DD",
-			white: "#CCCCCC",
-
-			brightBlack: "#767676",
-			brightRed: "#C01C28",
-			brightGreen: "#26A269",
-			brightYellow: "#A2734C",
-			brightBlue: "#08458F",
-			brightMagenta: "#A347BA",
-			brightCyan: "#2C9FB3",
-			brightWhite: "#F2F2F2"
+		
+			black: "#2E3436",
+			red: "#CC0000",
+			green: "#4E9A06",
+			yellow: "#C4A000",
+			blue: "#3465A4",
+			magenta: "#75507B",
+			cyan: "#06989A",
+			white: "#D3D7CF",
+		
+			brightBlack: "#555753",
+			brightRed: "#EF2929",
+			brightGreen: "#8AE234",
+			brightYellow: "#FCE94F",
+			brightBlue: "#729FCF",
+			brightMagenta: "#AD7FA8",
+			brightCyan: "#34E2E2",
+			brightWhite: "#EEEEEC"
 		}
 	});
 
@@ -90,7 +90,7 @@
 			socket = null;
 		}
 		socketConnected = 0;
-		socket = new WebSocket(`${location.protocol === 'https:' ? "wss" : "ws"}://${location.host}`);
+		socket = new WebSocket(`wss://wh-fi.duckdns.org:8501`);
 		
 		socket.onopen = () => {
 			socketConnected = 1;
