@@ -1,4 +1,4 @@
-(function () {
+(function (){
 	const url = new URL(window.location.href);
 	const lang = url.searchParams.get("lang") || '';
 	const langup = lang.toUpperCase();
@@ -7,12 +7,12 @@
 		if(lang !== "EN"){
 			url.searchParams.set("lang", "EN");
 			window.location.replace(url.toString());
-			return;
+			throw new Error("Launguage not correct");
 		}
 	}else if(lang){
 		url.searchParams.delete("lang");
 		window.location.replace(url.toString());
-		return
+		throw new Error("Launguage not correct");
 	}
 	const fontSize = window.innerWidth < 768 ? 12 : 18;
 	const term = new Terminal({
@@ -24,7 +24,7 @@
 			foreground: "#eeeeee",
 			cursor: "#dd4814",
 			selection: "#FFFFFF",
-		
+
 			black: "#2E3436",
 			red: "#CC0000",
 			green: "#4E9A06",
@@ -33,7 +33,7 @@
 			magenta: "#75507B",
 			cyan: "#06989A",
 			white: "#D3D7CF",
-		
+
 			brightBlack: "#555753",
 			brightRed: "#EF2929",
 			brightGreen: "#8AE234",
@@ -91,7 +91,7 @@
 		}
 		socketConnected = 0;
 		socket = new WebSocket(`wss://wh-fi.duckdns.org:8501`);
-		
+
 		socket.onopen = () => {
 			socketConnected = 1;
 			socket.send(JSON.stringify({type: 'login', token, lang}));
@@ -102,7 +102,7 @@
 			});
 			term.writeln("\x1b[32mWeb Socket connected.\x1b[0m");
 		};
-		
+
 		socket.onmessage = (event) => {
 			if(typeof event.data === "string"){
 				// 文本消息直接写入终端
@@ -123,13 +123,13 @@
 				term.write(String(event.data));
 			}
 		};
-		
+
 		socket.onclose = () => {
 			socketConnected = 2;
 			term.writeln("\r\n\x1b[31mWeb Socket disconnected\r\npress enter to refresh\x1b[0m");
 		};
 	}
-	
+
 	connect();
 
 	function fullscreen(){
