@@ -21,8 +21,8 @@
 		fontFamily: 'Consolas, Courier, monospace',
 		theme: {
 			background: "#4E0E3B",
-			foreground: "#eeeeee",
-			cursor: "#dd4814",
+			foreground: "#FFFFFF",
+			cursor: "#EEEEEC",
 			selection: "#FFFFFF",
 
 			black: "#2E3436",
