@@ -8,9 +8,7 @@ require('dotenv').config();
 
 const app = express();
 const helmet = require('helmet');
-const { time } = require('console');
-const e = require('express');
-app.use(helmet());
+// app.use(helmet());
 const server = (process.env.USE_KEY === "true" ? https.createServer(
 	{
 		key: fs.readFileSync(process.env.KEY_PATH || 'key/key.pem'),
@@ -39,7 +37,7 @@ function isValidUUIDv4(uuid) {
 }
 
 if(process.env.WEB !== "close"){
-	app.use(express.static('public'));
+	app.use(express.static('docs'));
 }
 const ttoc = new Map();//token to connection
 const ttoto = new Map();//token to timeout
