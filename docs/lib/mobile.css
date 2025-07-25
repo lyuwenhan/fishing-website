@@ -1,0 +1,97 @@
+/*
+ * Project: Intranet Chat Tool
+ * Copyright (C) 2025 lyuwenhan
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+
+.nav{
+	position: fixed;
+}
+nav {
+	width: fit-content;
+	height: 100%;
+	flex-direction: column;
+	padding: 0;
+	align-items: flex-start
+}
+nav li>a>span {
+	display: flex;
+	justify-content: center;
+}
+nav > *{
+	position: relative;
+	z-index: 12;
+}
+nav ul {
+	display: flex;
+	margin: 0;
+	flex-direction: column;
+	width: 100%;
+}
+nav li {
+	width: 100%;
+}
+.pos-right{
+	position: unset;
+}
+nav>ul>li{
+	position: relative;
+}
+nav>ul>li>ul{
+	z-index: 1;
+	top: -6px;
+	left: 100%;
+}
+.show0-mb:hover .show1-mb{
+	display: block;
+}
+.show1-mb{
+	display: none;
+}
+.show0-mb:hover .unshow1-mb{
+	display: none !important;
+}
+nav>ul>li>ul>li>span,nav>ul>li>ul>li>a>span,nav>ul>li>ul>li>a{
+	line-height: 22px;
+}
+.unshow-mb{
+	display: none;
+}
+.mobtop{
+	height: 60px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #2a83e9;
+}
+.moball{
+	z-index: 11;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: none;
+	display: none;
+}
+.nav:hover ~ .moball{
+	display: block;
+}
+
+.mob-only:not(.show1-mb){
+	display: block;
+}

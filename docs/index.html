@@ -6,19 +6,57 @@
 	<title>SSH Terminal - Fishing</title>
 	<link rel="stylesheet" href="lib/xterm.css"/>
 	<link rel="stylesheet" href="lib/main.css"/>
+	<link rel="stylesheet" href="lib/common.css">
+	<link rel="stylesheet" href="lib/mobile.css" media="only screen and (max-width: 768px)">
 	<script src="lib/uuid.js"></script>
 	<link rel="icon" href="data:,">
 </head>
 <body>
-	<div id="terminal"></div>
-	<svg id="full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13">
-		<path fill="grey" d="M 0 0 L 0 13 L 13 13 L 13 0"/>
-		<path fill="black" d="M 3 3 l 3 0 l 0 1 l -2 0 l 0 2 l -1 0 M 7 3 l 3 0 l 0 3 l -1 0 l 0 -2 l -2 0 M 3 7 l 1 0 l 0 2 l 2 0 l 0 1 l -3 0 M 9 7 l 1 0 l 0 3 l -3 0 l 0 -1 l 2 0"/>
-	</svg>
-	<svg id="unfull" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13" style="display: none;">
-		<path fill="grey" d="M 0 0 L 0 13 L 13 13 L 13 0"/>
-		<path fill="black" d="M 7 7 l 3 0 l 0 1 l -2 0 l 0 2 l -1 0 M 3 7 l 3 0 l 0 3 l -1 0 l 0 -2 l -2 0 M 7 3 l 1 0 l 0 2 l 2 0 l 0 1 l -3 0 M 5 3 l 1 0 l 0 3 l -3 0 l 0 -1 l 2 0"/>
-	</svg>
+	<div class="nav">
+		<nav class="no-select show0-mb" style="font-size: medium;">
+			<span class="unshow1-mb" style="line-height: 1em;font-size: 0; display: flex;">
+				<svg class="mob-only" style="width:52px; height: 52px; padding: 4px;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="#B9F3FB">
+					<rect x="20" y="25" width="60" height="8" rx="4"/>
+					<rect x="20" y="46" width="60" height="8" rx="4"/>
+					<rect x="20" y="67" width="60" height="8" rx="4"/>
+				</svg>
+			</span>
+			<span class="show1-mb mob-only" style="line-height: 1em;font-size: 0;">
+				<svg class="mob-only" style="width:52px; height: 52px; padding: 4px;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="#B9F3FB">
+					<rect x="20" y="25" width="60" height="8" rx="4"/>
+					<rect x="20" y="46" width="60" height="8" rx="4"/>
+					<rect x="20" y="67" width="60" height="8" rx="4"/>
+				</svg>
+			</span>
+			<ul class="show1-mb">
+				<li><a href="."><span>主页</span></a></li>
+				<li><a href="disclaimer.html"><span>免责声明</span></a></li>
+			</ul>
+			<ul class="pos-right show1-mb">
+				<li>
+					<span>语言/language</span>
+					<ul>
+						<li>
+							<span class="can-click"><a href="?lang=EN" class="bt-white">English</a></span>
+						</li>
+						<li>
+							<span class="can-click"><a href="?lang=ZH" class="bt-white">中文</a></span>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div id="terminal">
+		<svg id="full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13">
+			<path fill="grey" d="M 0 0 L 0 13 L 13 13 L 13 0"/>
+			<path fill="black" d="M 3 3 l 3 0 l 0 1 l -2 0 l 0 2 l -1 0 M 7 3 l 3 0 l 0 3 l -1 0 l 0 -2 l -2 0 M 3 7 l 1 0 l 0 2 l 2 0 l 0 1 l -3 0 M 9 7 l 1 0 l 0 3 l -3 0 l 0 -1 l 2 0"/>
+		</svg>
+		<svg id="unfull" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13" style="display: none;">
+			<path fill="grey" d="M 0 0 L 0 13 L 13 13 L 13 0"/>
+			<path fill="black" d="M 7 7 l 3 0 l 0 1 l -2 0 l 0 2 l -1 0 M 3 7 l 3 0 l 0 3 l -1 0 l 0 -2 l -2 0 M 7 3 l 1 0 l 0 2 l 2 0 l 0 1 l -3 0 M 5 3 l 1 0 l 0 3 l -3 0 l 0 -1 l 2 0"/>
+		</svg>
+	</div>
 
 	<script src="lib/xterm.js"></script>
 	<script src="lib/xterm-addon-fit.js"></script>

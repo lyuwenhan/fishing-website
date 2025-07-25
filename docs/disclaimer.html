@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>fishing-introduction</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="/lib/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="lib/common.css">
+	<link rel="stylesheet" href="lib/mobile.css" media="only screen and (max-width: 768px)">
+	<style>
+	</style>
+</head>
+
+<body>
+	<div class="nav">
+		<nav class="no-select show0-mb" style="font-size: medium;">
+			<span class="unshow1-mb" style="line-height: 1em;font-size: 0; display: flex;">
+				<svg class="mob-only" style="width:52px; height: 52px; padding: 4px;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="#B9F3FB">
+					<rect x="20" y="25" width="60" height="8" rx="4"/>
+					<rect x="20" y="46" width="60" height="8" rx="4"/>
+					<rect x="20" y="67" width="60" height="8" rx="4"/>
+				</svg>
+			</span>
+			<span class="show1-mb mob-only" style="line-height: 1em;font-size: 0;">
+				<svg class="mob-only" style="width:52px; height: 52px; padding: 4px;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="#B9F3FB">
+					<rect x="20" y="25" width="60" height="8" rx="4"/>
+					<rect x="20" y="46" width="60" height="8" rx="4"/>
+					<rect x="20" y="67" width="60" height="8" rx="4"/>
+				</svg>
+			</span>
+			<ul class="show1-mb">
+				<li><a href="."><span>主页</span></a></li>
+				<li><a href="disclaimer.html"><span>免责声明</span></a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="agr" translate="no">
+		<strong>免责声明：</strong><br>
+		本项目为非商业、自由分享性质的开源作品，仅供学习与娱乐使用。<br>
+		本项目及相关内容按“原样”提供，不保证适用性或稳定性。使用过程中产生的任何问题或损失，开发者不承担责任。<br>
+		项目中包含的内容（如数据、逻辑、游戏机制）不保证完全准确，可能会变动或失效，不对此进行任何保证。<br>
+		请在合法的前提下使用本程序，用户须自行确保使用行为符合法律法规。<br>
+		本项目源代码遵循 GPL-3.0 license 协议，详情请查阅代码仓库内 LICENSE 文件。<br>
+		作者不对使用者产生的任何损失进行任何赔偿或处理，包括但不限于存档丢失、预览图与实际不符等。<br>
+		如中英文免责声明表述不一致，以英文版本为准。<br><br>
+		<button class="agree">我已完全阅读并同意以上内容</button><br>
+		<button class="disagree">取消并退出</button><br><br>
+		<hr>
+		<strong>Disclaimer:</strong><br>
+		This is a non-commercial, open-source project intended solely for learning and entertainment purposes.<br>
+		This project and its related content are provided "as is", without any guarantees of suitability or stability. The developer assumes no responsibility for any issues or losses caused by the use of this program.<br>
+		The content included in the project (such as data, logic, and gameplay mechanics) is not guaranteed to be fully accurate and may change or become invalid at any time.<br>
+		Please use this program legally. Users are responsible for ensuring their actions comply with applicable laws and regulations.<br>
+		The source code is licensed under the GPL-3.0 license. For more details, please see the LICENSE file in the repository.<br>
+		The author shall not be held liable for any damages or loss caused by using this program, including but not limited to save file loss or mismatches between previews and actual results.<br>
+		In case of discrepancies between the Chinese and English versions of this disclaimer, the English version shall prevail.<br><br>
+		<button class="agree">I have fully read and agree to the above terms</button><br>
+		<button class="disagree">Cancel and Exit</button>
+	</div>
+	<div class="main">
+		<h2 class="isagree"></h2>
+		<button class="but"></button>
+		<div style="margin-top: 30px; font-size: 14px; color: gray;" translate="no">
+			<h3>免责声明：</h3>
+			本项目为非商业、自由分享性质的开源作品，仅供学习与娱乐使用。<br>
+			本项目及相关内容按“原样”提供，不保证适用性或稳定性。使用过程中产生的任何问题或损失，开发者不承担责任。<br>
+			项目中包含的内容（如数据、逻辑、游戏机制）不保证完全准确，可能会变动或失效，不对此进行任何保证。<br>
+			请在合法的前提下使用本程序，用户须自行确保使用行为符合法律法规。<br>
+			本项目源代码遵循 GPL-3.0 license 协议，详情请查阅代码仓库内 LICENSE 文件。<br>
+			作者不对使用者产生的任何损失进行任何赔偿或处理，包括但不限于存档丢失、预览图与实际不符等。<br>
+			如中英文免责声明表述不一致，以英文版本为准。<br><br><hr>
+			<h3>Disclaimer:</h3>
+			This is a non-commercial, open-source project intended solely for learning and entertainment purposes.<br>
+			This project and its related content are provided "as is", without any guarantees of suitability or stability. The developer assumes no responsibility for any issues or losses caused by the use of this program.<br>
+			The content included in the project (such as data, logic, and gameplay mechanics) is not guaranteed to be fully accurate and may change or become invalid at any time.<br>
+			Please use this program legally. Users are responsible for ensuring their actions comply with applicable laws and regulations.<br>
+			The source code is licensed under the GPL-3.0 license. For more details, please see the LICENSE file in the repository.<br>
+			The author shall not be held liable for any damages or loss caused by using this program, including but not limited to save file loss or mismatches between previews and actual results.<br>
+			In case of discrepancies between the Chinese and English versions of this disclaimer, the English version shall prevail.
+		</div>
+	</div>
+	<script>
+		const ag = window.localStorage.getItem("ag"), isa = document.querySelector(".isagree"), but = document.querySelector(".but");
+		if(ag === "false"){
+			isa.textContent = "您未同意一下声明";
+			but.textContent = "重新选择";
+			but.addEventListener("click", e=>{
+				window.localStorage.setItem("ag", "unknow");
+				location.reload();
+			})
+		}else if(ag === "true"){
+			isa.textContent = "您已同意一下声明";
+			but.textContent = "撤销同意";
+			but.addEventListener("click", e=>{
+				window.localStorage.setItem("ag", "unknow");
+				location.reload();
+			})
+		}else{
+			document.body.classList.add("sd");
+			document.querySelectorAll(".disagree").forEach(e=>{
+				e.addEventListener("click", ()=>{
+					window.localStorage.setItem("ag", "false");
+					location.reload();
+				});
+			})
+			document.querySelectorAll(".agree").forEach(e=>{
+				let ti = 10;
+				const con = e.textContent;
+				e.classList.add("nd");
+				e.textContent = `${con} (${ti})`;
+				const inte = setInterval(() => {
+					ti--;
+					if(ti > 0){
+						e.textContent = `${con} (${ti})`;
+					}else{
+						clearInterval(inte);
+						e.textContent = con;
+						e.classList.remove("nd");
+						e.addEventListener("click", ()=>{
+							window.localStorage.setItem("ag", "true");
+							location.href = ".";
+						});
+					}
+				}, 1000);
+			})
+		}
+	</script>
+</body>
+
+</html>

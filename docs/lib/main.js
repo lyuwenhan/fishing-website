@@ -1,4 +1,8 @@
-(function (){
+if(window.localStorage.getItem("ag") !== "true"){
+	if(!/^\/disclaimer\/?$/.test(location.pathname)){
+		location.href = 'disclaimer.html';
+	}
+}else (function (){
 	const url = new URL(window.location.href);
 	const lang = url.searchParams.get("lang") || '';
 	const langup = lang.toUpperCase();
@@ -45,7 +49,9 @@
 		}
 	});
 
-	term.open(document.getElementById("terminal"));
+	const terminal = document.getElementById('terminal');
+
+	term.open(terminal);
 	const fitAddon = new window.FitAddon.FitAddon();
 	term.loadAddon(fitAddon);
 
@@ -136,7 +142,7 @@
 		if(document.fullscreenElement){
 			document.exitFullscreen();
 		}else{
-			document.documentElement.requestFullscreen();
+			terminal.requestFullscreen();
 		}
 	}
 	window.addEventListener("keydown", (e) => {
@@ -221,7 +227,7 @@
 		socket.send(JSON.stringify({type: 'input', data}));
 	});
 
-	document.getElementById('terminal').addEventListener('contextmenu', (e) => {
+	terminal.addEventListener('contextmenu', (e) => {
 		e.preventDefault();
 		const selection = term.getSelection();
 		if(selection){
