@@ -81,14 +81,14 @@
 	<script>
 		const ag = window.localStorage.getItem("ag"), isa = document.querySelector(".isagree"), but = document.querySelector(".but");
 		if(ag === "false"){
-			isa.textContent = "您未同意一下声明";
+			isa.textContent = "您未同意以下声明";
 			but.textContent = "重新选择";
 			but.addEventListener("click", e=>{
 				window.localStorage.setItem("ag", "unknow");
 				location.reload();
 			})
 		}else if(ag === "true"){
-			isa.textContent = "您已同意一下声明";
+			isa.textContent = "您已同意以下声明";
 			but.textContent = "撤销同意";
 			but.addEventListener("click", e=>{
 				window.localStorage.setItem("ag", "unknow");
