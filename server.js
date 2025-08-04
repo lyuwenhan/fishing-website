@@ -24,13 +24,6 @@ const SSH_CONFIG = {
     privateKey: Buffer.from(process.env.KEY, 'base64').toString('utf-8')
 };
 
-const SSH_CONFIG_EN = {
-	host: process.env.SERVER_IP || "127.0.0.1",
-	port: process.env.SERVER_PORT || 22,
-	username: 'gameEN',
-    privateKey: Buffer.from(process.env.KEY, 'base64').toString('utf-8')
-};
-
 function isValidUUIDv4(uuid) {
 	const regex = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/;
 	return regex.test(uuid);
@@ -80,7 +73,7 @@ wss.on('connection', (ws) => {
 			const parsed = JSON.parse(msg);
 			if (parsed.type === 'login' && parsed.token && isValidUUIDv4(parsed.token)) {
 				const token = parsed.token;
-				const EN = parsed.lang === 'EN';
+				const lang = parsed.lang === 'EN' ? 'EN' : 'CN';
 				if(ttoc.has(token) && ttoto.has(token)){
 					const {stream, conn} = ttoc.get(token);
 					let {cnt, to} = ttoto.get(token);
@@ -126,7 +119,7 @@ wss.on('connection', (ws) => {
 				const conn = new Client();
 				conn.on('ready', () => {
 					ws.send('\x1b[32mSSH connected\r\n\x1b[0m');
-					conn.shell((err, stream) => {
+					conn.shell({env: {FISH_LANG: lang}}, (err, stream) => {
 						if (err) {
 							ws.send(`\r\nSSH Shell Error: ${err.message}\r\n`);
 							conn.end();
@@ -168,11 +161,7 @@ wss.on('connection', (ws) => {
 					});
 				});
 
-				if(EN){
-					conn.connect(SSH_CONFIG_EN);
-				}else{
-					conn.connect(SSH_CONFIG);
-				}
+				conn.connect(SSH_CONFIG);
 
 				ws.on('close', () => {
 					closeWs(token);
