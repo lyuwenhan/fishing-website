@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="data:,">
+	<title>fishing食用指南</title>
+	<style>
+		body {
+			margin: 40px 40px 80px 40px;
+		}
+
+		.num {
+			background-color: #f9f2f4;
+			color: #c7254e;
+			padding: 2px 4px;
+			border-radius: 4px;
+		}
+
+		table {
+			border-collapse: collapse;
+		}
+
+		th,
+		td {
+			border: 2px solid #777;
+			padding: 6px;
+			text-align: center;
+			vertical-align: middle;
+		}
+		.bigol > li::marker, h3{
+			font-size: 1.2em;
+			font-weight: bold;
+		}
+		.hugol > li::marker, h2{
+			font-size: 1.5em;
+			font-weight: bold;
+		}
+
+		.fi-rotten, .fi-normal, .fi-amethyst, .fi-lazuli, .fi-gold, .fi-emerald, .fi-diamond{
+			background-color: #4E0E3B;
+		}
+
+		.fi-rotten{
+			color: #EF2929;
+		}
+
+		.fi-normal{
+			color: #EEEEEC;
+		}
+
+		.fi-amethyst{
+			color: #AD7FA8;
+		}
+
+		.fi-lazuli{
+			color: #729FCF;
+		}
+
+		.fi-gold{
+			color: #FCE94F;
+		}
+
+		.fi-emerald{
+			color: #8AE234;
+		}
+
+		.fi-diamond{
+			color: #34E2E2;
+		}
+
+		a[href]{
+			color: blue;
+			text-decoration: none;
+		}
+
+		.c31{
+			color: #EF2929;
+		}
+
+		.c32{
+			color: #8AE234;
+		}
+
+		.c33{
+			color: #FCE94F;
+		}
+
+		.c34{
+			color: #729FCF;
+		}
+
+		details > summary .when-open{
+			display: none;
+		}
+		details > summary .when-closed{
+			display: inline;
+		}
+
+		details[open] > summary .when-open{
+			display: inline;
+		}
+		details[open] > summary .when-closed{
+			display: none;
+		}
+		.top {
+			position: fixed;
+			top: 10px;
+			right: 10px;
+			padding: 10px;
+			background-color: #eeeeee;
+			border-radius: 10px;
+			border: black 2px solid;
+		}
+		#top{
+			position: absolute;
+			top: 0;
+		}
+		html{
+			scroll-behavior: smooth;
+		}
+	</style>
+</head>
+
+<body>
+	<a href="#top" class="top">返回顶部</a>
+	<div id="top"></div>
+	<ol class="hugol">
+		<li>
+			<h2 id="目录">目录</h2>
+			<ol class="bigol">
+				<li>
+					<h3><a href="#目录">目录</a></h3>
+				</li>
+				<li>
+					<h3><a href="#钓鱼">钓鱼</a></h3>
+					<ol>
+						<li>
+							<a href="#鱼竿对鱼的概率的影响">鱼竿对鱼的概率的影响</a>
+						</li>
+						<li>
+							<a href="#水族馆收益">水族馆收益</a>
+						</li>
+						<li>
+							<a href="#雨势大小对应的最大雨滴数量">雨势大小对应的最大雨滴数量</a>
+						</li>
+						<li>
+							<a href="#大鱼">大鱼</a>
+						</li>
+						<li>
+							<a href="#钓鱼收益">钓鱼收益</a>
+						</li>
+						<li>
+							<a href="#脱钩">脱钩</a>
+						</li>
+						<li>
+							<a href="#鱼池">鱼池</a>
+						</li>
+						<li>
+							<a href="#天气">天气</a>
+						</li>
+						<li>
+							<a href="#食物">食物</a>
+						</li>
+					</ol>
+				</li>
+				<li>
+					<h3><a href="#商品列表">商品列表</a></h3>
+					<ol>
+						<li>
+							<a href="#上钩速度">上钩速度</a>
+						</li>
+						<li>
+							<a href="#钓鱼收益">钓鱼收益</a>
+						</li>
+						<li>
+							<a href="#脱钩概率">脱钩概率</a>
+						</li>
+						<li>
+							<a href="#购买清洁剂">购买清洁剂</a>
+						</li>
+						<li>
+							<a href="#清洁剂效率">清洁剂效率</a>
+						</li>
+						<li>
+							<a href="#水族馆">水族馆</a>
+						</li>
+						<li>
+							<a href="#烤箱">烤箱</a>
+						</li>
+						<li>
+							<a href="#甩杆倍速">甩杆倍速</a>
+						</li>
+						<li>
+							<a href="#大鱼概率">大鱼概率</a>
+						</li>
+					</ol>
+				</li>
+				<li>
+					<h3><a href="#杂项">杂项</a></h3>
+					<ol>
+						<li>
+							<a href="#输出速度">输出速度</a>
+						</li>
+						<li>
+							<a href="#抽奖">抽奖</a>
+						</li>
+						<li>
+							<a href="#跑酷">跑酷</a>
+						</li>
+					</ol>
+				</li>
+			</ol>
+		</li>
+		<li>
+			<h2 id="钓鱼">钓鱼</h2>
+			<ol class="bigol">
+				<li>
+					<h3 id="鱼竿对鱼的概率的影响">鱼竿对鱼的概率的影响</h3>
+					<table><thead><tr><th>钓竿种类</th><th class="fi-rotten">腐烂的鱼</th><th class="fi-normal">普通的鱼</th><th class="fi-amethyst">紫水晶鱼</th><th class="fi-lazuli">青金石鱼</th><th class="fi-gold">金鱼</th><th class="fi-emerald">绿宝石鱼</th><th class="fi-diamond">钻石鱼</th></tr></thead><tbody><tr><td class="fi-rotten">腐烂的钓竿</td><td><code class="num">0%</code></td><td><code class="num">81%</code></td><td><code class="num">14%</code></td><td><code class="num">4%</code></td><td><code class="num">0.9%</code></td><td><code class="num">0.09%</code></td><td><code class="num">0.01%</code></td></tr><tr><td class="fi-normal">普通的钓竿</td><td><code class="num">1%</code></td><td><code class="num">80%</code></td><td><code class="num">14%</code></td><td><code class="num">4%</code></td><td><code class="num">0.9%</code></td><td><code class="num">0.09%</code></td><td><code class="num">0.01%</code></td></tr><tr><td class="fi-amethyst">紫水晶钓竿</td><td><code class="num">3%</code></td><td><code class="num">75%</code></td><td><code class="num">17%</code></td><td><code class="num">4%</code></td><td><code class="num">0.9%</code></td><td><code class="num">0.09%</code></td><td><code class="num">0.01%</code></td></tr><tr><td class="fi-lazuli">青金石钓竿</td><td><code class="num">5%</code></td><td><code class="num">70%</code></td><td><code class="num">17%</code></td><td><code class="num">7%</code></td><td><code class="num">0.9%</code></td><td><code class="num">0.09%</code></td><td><code class="num">0.01%</code></td></tr><tr><td class="fi-gold">金钓竿</td><td><code class="num">7%</code></td><td><code class="num">65%</code></td><td><code class="num">17%</code></td><td><code class="num">7%</code></td><td><code class="num">3.9%</code></td><td><code class="num">0.09%</code></td><td><code class="num">0.01%</code></td></tr><tr><td class="fi-emerald">绿宝石钓竿</td><td><code class="num">9%</code></td><td><code class="num">60%</code></td><td><code class="num">17%</code></td><td><code class="num">7%</code></td><td><code class="num">3.9%</code></td><td><code class="num">3.09%</code></td><td><code class="num">0.01%</code></td></tr><tr><td class="fi-diamond">钻石钓竿</td><td><code class="num">0%</code></td><td><code class="num">66%</code></td><td><code class="num">17%</code></td><td><code class="num">7%</code></td><td><code class="num">3.9%</code></td><td><code class="num">3.09%</code></td><td><code class="num">3.01%</code></td></tr></tbody></table>
+				</li>
+				<li>
+					<h3 id="水族馆收益">水族馆收益</h3>
+					<table><thead><tr><th>品种</th><th>收益 / min</th></tr></thead><tbody><tr><td class="fi-rotten">腐烂的鱼</td><td><code class="num">1</code></td></tr><tr><td class="fi-normal">普通鱼</td><td><code class="num">10</code></td></tr><tr><td class="fi-amethyst">紫水晶鱼</td><td><code class="num">20</code></td></tr><tr><td class="fi-lazuli">青金石鱼</td><td><code class="num">30</code></td></tr><tr><td class="fi-gold">金鱼</td><td><code class="num">40</code></td></tr><tr><td class="fi-emerald">绿宝石鱼</td><td><code class="num">50</code></td></tr><tr><td class="fi-diamond">钻石鱼</td><td><code class="num">60</code></td></tr></tbody></table>
+				</li>
+				<li>
+					<h3 id="雨势大小对应的最大雨滴数量">雨势大小对应的最大雨滴数量</h3>
+					<table><thead><tr><th>种类</th><th>数量</th></tr></thead><tbody><tr><td>小</td><td><code class="num">11</code></td></tr><tr><td>中</td><td><code class="num">20</code></td></tr><tr><td>大</td><td><code class="num">40</code></td></tr></tbody></table>		</li>
+				</li>
+				<li>
+					<h3 id="大鱼">大鱼</h3>
+					<ol>
+						<li>
+							<p>tips:大鱼的收益为同品种小鱼的两倍</p>
+						</li>
+						<li>
+							<p>tips:大鱼概率可通过升级提高</p>
+						</li>
+						<li>
+							<p>tips:大鱼的移动速度比小鱼慢一倍</p>
+						</li>
+					</ol>
+				</li>
+				<li>
+					<h3 id="钓鱼收益">钓鱼收益</h3>
+					<table><thead><tr><th>品种</th><th>收益</th></tr></thead><tbody><tr><td class="fi-rotten">腐烂的鱼</td><td><code class="num">0</code></td></tr><tr><td class="fi-normal">普通鱼</td><td><code class="num">1</code> 倍</td></tr><tr><td class="fi-amethyst">紫水晶鱼</td><td><code class="num">2</code> 倍</td></tr><tr><td class="fi-lazuli">青金石鱼</td><td><code class="num">5</code> 倍</td></tr><tr><td class="fi-gold">金鱼</td><td><code class="num">10</code> 倍</td></tr><tr><td class="fi-emerald">绿宝石鱼</td><td><code class="num">50</code> 倍</td></tr><tr><td class="fi-diamond">钻石鱼</td><td><code class="num">100</code> 倍</td></tr></tbody></table>
+				</li>
+				<li>
+					<h3 id="脱钩">脱钩</h3>
+					<ol>
+						<li>
+							<p>tips:脱钩概率初始为 <code class="num">50%</code></p>
+						</li>
+						<li>
+							<p>tips:脱钩概率可通过升级降低</p>
+						</li>
+					</ol>
+				</li>
+				<li>
+					<h3 id="鱼池">鱼池</h3>
+					<ol>
+						<li>
+							<p>tips:当前版本有鱼池, 钓到的鱼不会马上卖出, 而是手动统一卖出</p>
+						</li>
+						<li>
+							<p>tips:所有鱼初始会有 <code class="num">10</code> 点的新鲜度, 每次钓鱼后会减少 <code class="num">1</code> 点</p>
+						</li>
+						<li>
+							<p>tips:非腐烂的鱼新鲜度扣光后会降级, 价格减少 <code class="num">10</code> , 新鲜度变为 <code class="num">10</code></p>
+							<table><thead><tr><th>品种</th><th>降级后品种</th></tr></thead><tbody><tr><td class="fi-diamond">钻石鱼</td><td class="fi-emerald">绿宝石鱼</td></tr><tr><td class="fi-emerald">绿宝石鱼</td><td class="fi-gold">金鱼</td></tr><tr><td class="fi-gold">金鱼</td><td class="fi-lazuli">青金石鱼</td></tr><tr><td class="fi-lazuli">青金石鱼</td><td class="fi-amethyst">紫水晶鱼</td></tr><tr><td class="fi-amethyst">紫水晶鱼</td><td class="fi-normal">普通鱼</td></tr><tr><td class="fi-normal">普通鱼</td><td class="fi-rotten">腐烂的鱼</td></tr></tbody></table>
+						</li>
+						<li>
+							<p>tips:腐烂的鱼新鲜度扣光后会增加 <code class="num">1</code> 级的污染,最高为 <code class="num">9</code> 级</p>
+							<table><thead><tr><th>污染等级</th><th>每次钓鱼消耗的新鲜度</th><th>收益减少</th></tr></thead><tbody><tr><td><code class="num">0</code></td><td><code class="num">1</code></td><td><code class="num">0%</code></td></tr><tr><td><code class="num">1</code></td><td><code class="num">2</code></td><td><code class="num">2%</code></td></tr><tr><td><code class="num">2</code></td><td><code class="num">3</code></td><td><code class="num">4%</code></td></tr><tr><td><code class="num">3</code></td><td><code class="num">4</code></td><td><code class="num">6%</code></td></tr><tr><td><code class="num">4</code></td><td><code class="num">5</code></td><td><code class="num">8%</code></td></tr><tr><td><code class="num">5</code></td><td><code class="num">6</code></td><td><code class="num">10%</code></td></tr><tr><td><code class="num">6</code></td><td><code class="num">7</code></td><td><code class="num">20%</code></td></tr><tr><td><code class="num">7</code></td><td><code class="num">8</code></td><td><code class="num">30%</code></td></tr><tr><td><code class="num">8</code></td><td><code class="num">9</code></td><td><code class="num">40%</code></td></tr><tr><td><code class="num">9</code></td><td><code class="num">10</code></td><td><code class="num">50%</code></td></tr></tbody></table>
+						</li>
+						<li>
+							<p>tips:新鲜度大于 <code class="num">8</code> 的鱼价格为原来的 <code class="num">120%</code></p>
+						</li>
+						<li>
+							<p>tips:新鲜度小于 <code class="num">2</code> 的鱼价格为原来的 <code class="num">80%</code></p>
+						</li>
+					</ol>
+				</li>
+				<li>
+					<h3 id="天气">天气</h3>
+					<ol>
+						<li>
+							<p>雨天钓鱼等待时间会减少，具体为:</p>
+							<table><thead><tr><th>天气</th><th>时间缩减(秒)</th></tr></thead><tbody><tr><td>小雨</td><td><code class="num">5</code></td></tr><tr><td>中雨</td><td><code class="num">10</code></td></tr><tr><td>大雨</td><td><code class="num">15</code></td></tr></tbody></table>
+						</li>
+						<li>
+							<p>雪天钓鱼等待时间会增加，具体为:</p>
+							<table><thead><tr><th>天气</th><th>时间增加(秒)</th></tr></thead><tbody><tr><td>小雪</td><td><code class="num">5</code></td></tr><tr><td>中雪</td><td><code class="num">10</code></td></tr><tr><td>大雪</td><td><code class="num">15</code></td></tr></tbody></table>
+						</li>
+						<li>
+							<p>雾天脱钩概率增加 <code class="num">10</code></p>
+						</li>
+					</ol>
+				</li>
+				<li>
+					<h3 id="食物">食物</h3>
+					<ol>
+						<li>
+							<p>烤箱同时只可以烤制单一种类的鱼</p>
+						</li>
+						<li>
+							<p>不同鱼种类的鱼提供的饱食度:</p>
+							<table><thead><tr><th>种类</th><th>生鱼</th><th>熟鱼</th></tr></thead><tbody><tr><td class="fi-normal">普通鱼</td><td><code class="num">4</code></td><td><code class="num">8</code></td></tr><tr><td class="fi-amethyst">紫水晶鱼</td><td><code class="num">5</code></td><td><code class="num">9</code></td></tr><tr><td class="fi-lazuli">青金石鱼</td><td><code class="num">6</code></td><td><code class="num">10</code></td></tr><tr><td class="fi-gold">金鱼</td><td><code class="num">7</code></td><td><code class="num">11</code></td></tr><tr><td class="fi-emerald">绿宝石鱼</td><td><code class="num">8</code></td><td><code class="num">12</code></td></tr><tr><td class="fi-diamond">钻石鱼</td><td><code class="num">9</code></td><td><code class="num">13</code></td></tr></tbody></table>
+						</li>
+					</ol>
+				</li>
+			</ol>
+		</li>
+		<li>
+			<h2 id="商品列表">商品列表</h2>
+			<ol class="bigol">
+				<li>
+					<h3 id="上钩速度">上钩速度</h3>
+					<table><thead><tr><th>等级</th><th>最小上钩速度</th><th>最大上钩速度</th><th>升级花费</th></tr></thead><tbody><tr><td><code class="num">0</code></td><td><code class="num">$50</code></td><td><code class="num">$100</code></td><td>-</td></tr><tr><td><code class="num">1</code></td><td><code class="num">$40</code></td><td><code class="num">$100</code></td><td><code class="num">$5</code></td></tr><tr><td><code class="num">2</code></td><td><code class="num">$40</code></td><td><code class="num">$90</code></td><td><code class="num">$5</code></td></tr><tr><td><code class="num">3</code></td><td><code class="num">$40</code></td><td><code class="num">$80</code></td><td><code class="num">$5</code></td></tr><tr><td><code class="num">4</code></td><td><code class="num">$30</code></td><td><code class="num">$80</code></td><td><code class="num">$5</code></td></tr><tr><td><code class="num">5</code></td><td><code class="num">$30</code></td><td><code class="num">$70</code></td><td><code class="num">$10</code></td></tr><tr><td><code class="num">6</code></td><td><code class="num">$30</code></td><td><code class="num">$60</code></td><td><code class="num">$20</code></td></tr><tr><td><code class="num">7</code></td><td><code class="num">$30</code></td><td><code class="num">$50</code></td><td><code class="num">$30</code></td></tr><tr><td><code class="num">8</code></td><td><code class="num">$20</code></td><td><code class="num">$50</code></td><td><code class="num">$40</code></td></tr><tr><td><code class="num">9</code></td><td><code class="num">$20</code></td><td><code class="num">$40</code></td><td><code class="num">$50</code></td></tr><tr><td><code class="num">10</code></td><td><code class="num">$10</code></td><td><code class="num">$40</code></td><td><code class="num">$60</code></td></tr><tr><td><code class="num">11</code></td><td><code class="num">$9</code></td><td><code class="num">$40</code></td><td><code class="num">$70</code></td></tr><tr><td><code class="num">12</code></td><td><code class="num">$7</code></td><td><code class="num">$40</code></td><td><code class="num">$80</code></td></tr><tr><td><code class="num">13</code></td><td><code class="num">$5</code></td><td><code class="num">$40</code></td><td><code class="num">$90</code></td></tr><tr><td><code class="num">14</code></td><td><code class="num">$3</code></td><td><code class="num">$40</code></td><td><code class="num">$100</code></td></tr><tr><td><code class="num">15</code></td><td><code class="num">$3</code></td><td><code class="num">$35</code></td><td><code class="num">$150</code></td></tr><tr><td><code class="num">16</code></td><td><code class="num">$3</code></td><td><code class="num">$30</code></td><td><code class="num">$200</code></td></tr><tr><td><code class="num">17</code></td><td><code class="num">$3</code></td><td><code class="num">$25</code></td><td><code class="num">$200</code></td></tr><tr><td><code class="num">18</code></td><td><code class="num">$3</code></td><td><code class="num">$20</code></td><td><code class="num">$200</code></td></tr><tr><td><code class="num">19</code></td><td><code class="num">$3</code></td><td><code class="num">$10</code></td><td><code class="num">$300</code></td></tr><tr><td><code class="num">20</code></td><td><code class="num">$3</code></td><td><code class="num">$5</code></td><td><code class="num">$350</code></td></tr><tr><td><code class="num">21</code></td><td><code class="num">$3</code></td><td><code class="num">$4</code></td><td><code class="num">$400</code></td></tr><tr><td><code class="num">22</code></td><td><code class="num">$2</code></td><td><code class="num">$4</code></td><td><code class="num">$500</code></td></tr><tr><td><code class="num">23</code></td><td><code class="num">$2</code></td><td><code class="num">$3</code></td><td><code class="num">$600</code></td></tr><tr><td><code class="num">24</code></td><td><code class="num">$1</code></td><td><code class="num">$3</code></td><td><code class="num">$700</code></td></tr><tr><td><code class="num">25</code></td><td><code class="num">$1</code></td><td><code class="num">$2</code></td><td><code class="num">$700</code></td></tr></tbody></table>
+					<br>
+				</li>
+				<li>
+					<h3 id="钓鱼收益">钓鱼收益</h3>
+					<table><thead><tr><th>等级</th><th>最小钓鱼收益</th><th>最大钓鱼收益</th><th>升级花费</th></tr></thead><tbody><tr><td><code class="num">0</code></td><td><code class="num">$10</code></td><td><code class="num">$20</code></td><td>-</td></tr><tr><td><code class="num">1</code></td><td><code class="num">$12</code></td><td><code class="num">$20</code></td><td><code class="num">$20</code></td></tr><tr><td><code class="num">2</code></td><td><code class="num">$15</code></td><td><code class="num">$20</code></td><td><code class="num">$20</code></td></tr><tr><td><code class="num">3</code></td><td><code class="num">$15</code></td><td><code class="num">$30</code></td><td><code class="num">$20</code></td></tr><tr><td><code class="num">4</code></td><td><code class="num">$20</code></td><td><code class="num">$30</code></td><td><code class="num">$30</code></td></tr><tr><td><code class="num">5</code></td><td><code class="num">$20</code></td><td><code class="num">$40</code></td><td><code class="num">$40</code></td></tr><tr><td><code class="num">6</code></td><td><code class="num">$25</code></td><td><code class="num">$40</code></td><td><code class="num">$50</code></td></tr><tr><td><code class="num">7</code></td><td><code class="num">$30</code></td><td><code class="num">$40</code></td><td><code class="num">$60</code></td></tr><tr><td><code class="num">8</code></td><td><code class="num">$35</code></td><td><code class="num">$50</code></td><td><code class="num">$70</code></td></tr><tr><td><code class="num">9</code></td><td><code class="num">$40</code></td><td><code class="num">$50</code></td><td><code class="num">$80</code></td></tr><tr><td><code class="num">10</code></td><td><code class="num">$40</code></td><td><code class="num">$55</code></td><td><code class="num">$80</code></td></tr><tr><td><code class="num">11</code></td><td><code class="num">$40</code></td><td><code class="num">$60</code></td><td><code class="num">$80</code></td></tr><tr><td><code class="num">12</code></td><td><code class="num">$45</code></td><td><code class="num">$60</code></td><td><code class="num">$80</code></td></tr><tr><td><code class="num">13</code></td><td><code class="num">$50</code></td><td><code class="num">$60</code></td><td><code class="num">$90</code></td></tr><tr><td><code class="num">14</code></td><td><code class="num">$60</code></td><td><code class="num">$70</code></td><td><code class="num">$100</code></td></tr><tr><td><code class="num">15</code></td><td><code class="num">$60</code></td><td><code class="num">$70</code></td><td><code class="num">$150</code></td></tr><tr><td><code class="num">16</code></td><td><code class="num">$60</code></td><td><code class="num">$80</code></td><td><code class="num">$200</code></td></tr><tr><td><code class="num">17</code></td><td><code class="num">$70</code></td><td><code class="num">$80</code></td><td><code class="num">$200</code></td></tr><tr><td><code class="num">18</code></td><td><code class="num">$80</code></td><td><code class="num">$90</code></td><td><code class="num">$200</code></td></tr><tr><td><code class="num">19</code></td><td><code class="num">$85</code></td><td><code class="num">$100</code></td><td><code class="num">$300</code></td></tr><tr><td><code class="num">20</code></td><td><code class="num">$85</code></td><td><code class="num">$105</code></td><td><code class="num">$350</code></td></tr><tr><td><code class="num">21</code></td><td><code class="num">$90</code></td><td><code class="num">$110</code></td><td><code class="num">$400</code></td></tr><tr><td><code class="num">22</code></td><td><code class="num">$95</code></td><td><code class="num">$120</code></td><td><code class="num">$500</code></td></tr><tr><td><code class="num">23</code></td><td><code class="num">$100</code></td><td><code class="num">$130</code></td><td><code class="num">$600</code></td></tr><tr><td><code class="num">24</code></td><td><code class="num">$100</code></td><td><code class="num">$135</code></td><td><code class="num">$700</code></td></tr><tr><td><code class="num">25</code></td><td><code class="num">$100</code></td><td><code class="num">$140</code></td><td><code class="num">$700</code></td></tr><tr><td><code class="num">26</code></td><td><code class="num">$100</code></td><td><code class="num">$145</code></td><td><code class="num">$700</code></td></tr><tr><td><code class="num">27</code></td><td><code class="num">$100</code></td><td><code class="num">$150</code></td><td><code class="num">$700</code></td></tr><tr><td><code class="num">28</code></td><td><code class="num">$100</code></td><td><code class="num">$170</code></td><td><code class="num">$700</code></td></tr><tr><td><code class="num">29</code></td><td><code class="num">$100</code></td><td><code class="num">$200</code></td><td><code class="num">$700</code></td></tr></tbody></table>
+					<br>
+				</li>
+				<li>
+					<h3 id="脱钩概率">脱钩概率</h3>
+					<table><thead><tr><th>等级</th><th>脱钩概率</th><th>升级花费</th></tr></thead><tbody><tr><td><code class="num">0</code></td><td><code class="num">50%</code></td><td>-</td></tr><tr><td><code class="num">1</code></td><td><code class="num">40%</code></td><td><code class="num">$100</code> </td></tr><tr><td><code class="num">2</code></td><td><code class="num">30%</code></td><td><code class="num">$100</code> </td></tr><tr><td><code class="num">3</code></td><td><code class="num">20%</code></td><td><code class="num">$100</code> </td></tr><tr><td><code class="num">4</code></td><td><code class="num">10%</code></td><td><code class="num">$100</code> </td></tr><tr><td><code class="num">5</code></td><td><code class="num">5%</code></td><td><code class="num">$100</code> </td></tr><tr><td><code class="num">6</code></td><td><code class="num">4%</code></td><td><code class="num">$100</code> </td></tr><tr><td><code class="num">7</code></td><td><code class="num">3%</code></td><td><code class="num">$100</code> </td></tr><tr><td><code class="num">8</code></td><td><code class="num">2%</code></td><td><code class="num">$100</code> </td></tr><tr><td><code class="num">9</code></td><td><code class="num">1%</code></td><td><code class="num">$100</code> </td></tr><tr><td><code class="num">10</code></td><td><code class="num">0%</code></td><td><code class="num">$500</code></td></tr></tbody></table>
+					<br>
+				</li>
+				<li>
+					<h3 id="购买清洁剂">购买清洁剂</h3>
+					<ol>
+						<li>清洁剂价格为 <code class="num">$10</code> / 个</li>
+					</ol>
+				</li>
+				<li>
+					<h3 id="清洁剂效率">清洁剂效率</h3>
+					<ol>
+						<li>清洁剂效率初始为 <code class="num">1</code></li>
+						<li>清洁剂效率升级花费为 <code class="num">$30</code> / 次</li>
+						<li>清洁剂效率最高为 <code class="num">10</code></li>
+					</ol>
+				</li>
+				<li>
+					<h3 id="水族馆">水族馆</h3>
+					<table><thead><tr><th>数量</th><th>升级花费</th></tr></thead><tbody><tr><td><code class="num">1</code></td><td><code class="num">$300</code></td></tr><tr><td><code class="num">2</code></td><td><code class="num">$400</code></td></tr><tr><td><code class="num">3</code></td><td><code class="num">$500</code></td></tr><tr><td><code class="num">4</code></td><td><code class="num">$600</code></td></tr><tr><td><code class="num">5</code></td><td><code class="num">$700</code></td></tr><tr><td><code class="num">6</code></td><td><code class="num">$800</code></td></tr><tr><td><code class="num">7</code></td><td><code class="num">$900</code></td></tr><tr><td><code class="num">8</code></td><td><code class="num">$1000</code></td></tr><tr><td><code class="num">9</code></td><td><code class="num">$1100</code></td></tr><tr><td><code class="num">10</code></td><td><code class="num">$1200</code></td></tr><tr><td><code class="num">11</code></td><td><code class="num">$1300</code></td></tr><tr><td><code class="num">12</code></td><td><code class="num">$1400</code></td></tr><tr><td><code class="num">13</code></td><td><code class="num">$1500</code></td></tr><tr><td><code class="num">14</code></td><td><code class="num">$1600</code></td></tr><tr><td><code class="num">15</code></td><td><code class="num">$1700</code></td></tr><tr><td><code class="num">16</code></td><td><code class="num">$1800</code></td></tr><tr><td><code class="num">17</code></td><td><code class="num">$1900</code></td></tr><tr><td><code class="num">18</code></td><td><code class="num">$2000</code></td></tr><tr><td><code class="num">19</code></td><td><code class="num">$2100</code></td></tr><tr><td><code class="num">20</code></td><td><code class="num">$2200</code></td></tr><tr><td><code class="num">21</code></td><td><code class="num">$2300</code></td></tr><tr><td><code class="num">22</code></td><td><code class="num">$2400</code></td></tr><tr><td><code class="num">23</code></td><td><code class="num">$2500</code></td></tr><tr><td><code class="num">24</code></td><td><code class="num">$2600</code></td></tr><tr><td><code class="num">25</code></td><td><code class="num">$2700</code></td></tr><tr><td><code class="num">26</code></td><td><code class="num">$2800</code></td></tr><tr><td><code class="num">27</code></td><td><code class="num">$2900</code></td></tr><tr><td><code class="num">28</code></td><td><code class="num">$3000</code></td></tr><tr><td><code class="num">29</code></td><td><code class="num">$3100</code></td></tr><tr><td><code class="num">30</code></td><td><code class="num">$3200</code></td></tr></tbody></table>
+				</li>
+				<li>
+					<h3 id="烤箱">烤箱</h3>
+					<table><thead><tr><th>数量</th><th>升级花费</th></tr></thead><tbody><tr><td><code class="num">1</code></td><td><code class="num">$50</code> </td></tr><tr><td><code class="num">2</code></td><td><code class="num">$1000</code> </td></tr><tr><td><code class="num">3</code></td><td><code class="num">$2000</code></td></tr></tbody></table>
+				</li>
+				<li>
+					<h3 id="甩杆倍速">甩杆倍速</h3>
+					<ol>
+						<li>甩杆倍速初始为 <code class="num">1</code> 倍</li>
+						<li>甩杆倍速升级花费为 <code class="num">$1000</code> / 次, 每次提高 <code class="num">1</code> 倍</li>
+						<li>甩杆倍速最高为 <code class="num">10</code> 倍</li>
+					</ol>
+				</li>
+				<li>
+					<h3 id="大鱼概率">大鱼概率</h3>
+					<ol>
+						<li>大鱼概率初始为 <code class="num">20%</code></li>
+						<li>大鱼概率升级花费为 <code class="num">$1000</code> / 次, 每次提高 <code class="num">10%</code></li>
+						<li>大鱼概率最高为 <code class="num">60%</code></li>
+					</ol>
+				</li>
+			</ol>
+		</li>
+		<li>
+			<h2 id="杂项">杂项</h2>
+			<ol class="bigol">
+				<li>
+					<h3 id="输出速度">输出速度</h3>
+					<p>输出速度一共有三个等级，默认为普通</p>
+					<ol>
+						<li>
+							<p>慢速</p>
+							<p>在这个速度下，每 <code class="num">2</code> 个字符间会有 <code class="num">0.02</code> 秒的延迟</p>
+						</li>
+						<li>
+							<p>普通</p>
+							<p>在这个速度下，每 <code class="num">2</code> 个字符间会有 <code class="num">0.01</code> 秒的延迟</p>
+						</li>
+						<li>
+							<p>急速</p>
+							<p>在这个速度下，所以内容会瞬间输出</p>
+						</li>
+					</ol>
+				</li>
+				<li>
+					<h3 id="抽奖">抽奖</h3>
+					<p>抽奖需要消耗 <code class="num">100</code> 累积钓鱼数量 + <code class="num">$1000</code></p>
+					<p>其中奖品如下:</p>
+					<table><thead><tr><th>奖项</th><th>概率</th></tr></thead><tbody><tr><td>愚人节彩蛋</td><td><code class="num">20%</code></td></tr><tr><td>大鱼诱饵</td><td><code class="num">20%</code></td></tr><tr><td>钻石鱼</td><td><code class="num">1%</code></td></tr></tbody></table>
+				</li>
+				<li>
+					<h3 id="跑酷">跑酷</h3>
+					<details>
+						<summary>
+							<span>点击</span>
+							<span class="when-closed">展开</span>
+							<span class="when-open">收起</span>
+							<span>地图</span>
+						</summary>
+						<span style="padding:15px;background-color:#4E0E3B;display:inline-block;color:#ffffff;white-space:pre;font-family:'Consolas',Courier,monospace;">+-----+-+---+---------------------------------------------------------------------------------------+<br>|     | |   |                                                                                       |<br>+---+ +<span class=c33>&lt;</span>+   |                                                                                +---   |<br>|   | | | +-+          +---+                     --                          -      -      --+   \  |<br>|   | | | |            |   |                    /                                                 | |<br>|   | | | |            |   +-------------------+<span class=c31>*****</span><span class=c32>Z</span><span class=c31>****</span><span class=c32>Z</span><span class=c31>****</span><span class=c32>Z</span><span class=c31>****</span><span class=c32>Z</span><span class=c31>****</span><span class=c32>Z</span><span class=c31>******</span><span class=c32>Z</span><span class=c31>******</span><span class=c32>Z</span><span class=c31>**********</span>| |<br>+<span class=c33>^^^</span>+ +<span class=c33>^</span>+ +---------+  |   |  <span class=c33>finish</span>           +--------------------------------------------------+ |<br>|   | | | |         |  |   |     \             |                                                  | |<br>|   | | | |   +---+ |  +---+      \            |  -   -   -   -   -   -   -   -   -   -   -   -   | |<br>|   |   |     |   |        |       \           |<span class=c33>&gt;</span>/ \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \    |<br>+<span class=c33>^^^</span>+--<span class=c33>^</span>+-----+---+--------+--------+-----------+-+-+---+---+---+---+---+---+---+---+---+---+---+---+<br>|   |   |     |                                                                                 |<span class=c34>###</span>|<br>|   |   |     |                                                                                 | |<span class=c34>#</span>|<br>|   |   |     |                                                      |                          | |<span class=c34>#</span>|<br>+<span class=c33>^^^</span>+ +-+  +--+ +-----     ------             |                   +--+      ---                 | |<span class=c34>#</span>|<br>|   | | |  |  | |                \        +---+                   |        |<span class=c31>***</span>\                | |<span class=c34>#</span>|<br>|   | | |  |  | |                 \       |             <span class=c32>ZZ</span>        |        |<span class=c31>****</span>+--   -------     |<span class=c34>#</span>|<br>|     |    |    |                  \      |                       |        |<span class=c31>*****************</span>\    |<span class=c34>#</span>|<br>+<span class=c33>^^^</span>--+<span class=c33>^</span>---+<span class=c33>^^</span>--+<span class=c33>^^^^^</span>---+          \     |<span class=c31>******</span><span class=c32>ZZ</span><span class=c31>***********</span><span class=c32>Z</span><span class=c31>***</span>|<span class=c31>*****</span><span class=c32>ZZ</span><span class=c31>*</span>|<span class=c31>******************</span>\   |<span class=c34>#</span>|<br>+-----+----+----+--------+-------+---+----+-----------------+-----+--------+-------------------+--+<span class=c34>#</span>|<br>|                                |                          |     |                               |<span class=c34>#</span>|<br>|                                |              ---+--+---- |     |                    +---       |<span class=c34>#</span>|<br>|                                |                 |  |           |                   /           |<span class=c34>#</span>|<br>|                                |       -------   |  |           |                  /            |<span class=c34>#</span>|<br>|                         +----+ |                 |           /| |            -----+     |<span class=c34>#######</span>|<span class=c34>#</span>|<br>|                    -----+    | |                 |  +-------+ | |                       |<span class=c34>#######</span>|<span class=c34>#</span>|<br>|                              | +--------                      | |      +----+           |<span class=c34>#######</span>|<span class=c34>#</span>|<br>|             |                | |                              | |     /      \          |<span class=c34>#######</span>|<span class=c34>#</span>|<br>|        -----+------          | |                              | |    /        \         |<span class=c34>#######</span>|<span class=c34>#</span>|<br>|             |                | |        -----+                | |   /          \        |<span class=c34>#######</span>|<span class=c34>#</span>|<br>|             |                |               |                |    /            \       |<span class=c34>#########</span>|<br>+-------------+----------------+---------------+----------------+---+--------------+------+---------|</span>
+					</details>
+				</li>
+			</ol>
+		</li>
+	</ol>
+</body>
