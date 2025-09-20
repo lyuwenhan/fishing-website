@@ -19,16 +19,37 @@
 		}
 
 		table {
-			border-collapse: collapse;
+			border-collapse: separate;
+			border-spacing: 0;
+			border: 2px solid #777;
+			border-radius: 5px;
+			overflow: hidden;
 		}
 
 		th,
 		td {
-			border: 2px solid #777;
+			border: 1px solid #777;
 			padding: 6px;
 			text-align: center;
 			vertical-align: middle;
 		}
+
+		table>:first-child>:first-child>*{
+			border-top: none;
+		}
+
+		table>:last-child>:last-child>*{
+			border-bottom: none;
+		}
+
+		table>*>*>:first-child{
+			border-left: none;
+		}
+
+		table>*>*>:last-child{
+			border-right: none;
+		}
+
 		.bigol > li::marker, h3{
 			font-size: 1.2em;
 			font-weight: bold;
