@@ -1,0 +1,32 @@
+name: Sync Docs to wh-fi.github.io
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/**"
+      
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Copy docs
+        run: |
+          mkdir -p export
+          cp -r docs/* export/
+
+      - name: Push to target repo
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.GH_PAGES_TOKEN }}
+          external_repository: wh-fi/wh-fi.github.io
+          publish_dir: ./export
+          publish_branch: main
+          force_orphan: true
